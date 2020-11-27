@@ -1,34 +1,38 @@
-# # 如何快速安装使用DataSphereStudio
+## 如何快速安装使用DataSphereStudio
 
 ### DataSphereStudio安装分为前端部分和后台部分，安装之前首先需要确定前、后端安装环境。
 
 ### 一、确定您的安装环境
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataSphereStudio根据组件丰富程度，安装环境略有差异，分为简单版和标准版，其区别如下：
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataSphereStudio根据组件丰富程度，安装环境略有差异，分为精简版、简单版和标准版，其区别如下：
 
 ----
+1. **精简版**：
 
-1. **简单版**：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最少环境依赖，前后端基础环境部分仅需准备：[Linkis](https://github.com/WeBankFinTech/Linkis)、JAVA、MYSQL、[Nginx](https://www.nginx.com/) ，您即刻能享受到DSS已集成的数据开发Scriptis服务。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最少环境依赖，前后端基础环境部分仅需准备：[Linkis](https://github.com/WeBankFinTech/Linkis)、JAVA、MYSQL、[Nginx](https://www.nginx.com/) ，您即刻能享受到DSS已集成的数据开发Scriptis、工作流实时执行，可视化，邮件发送，DATACHECK和EVENTCHECK服务。
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点我进入[简单版DSS环境配置准备](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%BA%8C%E7%AE%80%E5%8D%95%E7%89%88dss%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%87%86%E5%A4%87)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点我进入[精简版DSS环境配置准备](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%BA%8C%E7%B2%BE%E7%AE%80%E7%89%88dss%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%87%86%E5%A4%87)
 
 ----
+2. **简单版**：
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;较少环境依赖，前后端基础环境部分仅需准备：[Linkis](https://github.com/WeBankFinTech/Linkis)、JAVA、MYSQL、[Nginx](https://www.nginx.com/) ，您即刻能享受到DSS已集成的数据开发Scriptis、工作流实时执行，可视化，邮件发送，DATACHECK和EVENTCHECK服务。
 
-2. **标准版**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点我进入[简单版DSS环境配置准备](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%B8%89%E7%AE%80%E5%8D%95%E7%89%88dss%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%87%86%E5%A4%87)
+
+----
+3. **标准版**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSS还实现了很多外部系统的集成，如[Qualitis](https://github.com/WeBankFinTech/Qualitis)和[Azkaban](https://github.com/azkaban/azkaban)，如果您想使用这些外部系统，则需要在简单版的基础上，提前安装和启动好Qualitis和Azkaban服务，并确保其能够正常提供服务，并在配置中指定对应服务的IP和端口。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点我进入[标准版DSS环境配置准备](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%B8%89%E6%A0%87%E5%87%86%E7%89%88dss%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%87%86%E5%A4%87)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点我进入[标准版DSS环境配置准备](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E5%9B%9B%E6%A0%87%E5%87%86%E7%89%88dss%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%87%86%E5%A4%87)
 
 ----
 
-## 二、简单版DSS环境配置准备
+## 二、精简版DSS环境配置准备
 DSS环境配置准备分为三部分，前后端基础软件安装、后端环境配置准备和前端环配置境准备，详细介绍如下：
 ### 2.1 前后端基础软件安装
-Linkis标准版(0.9.1及以上)，[如何安装Linkis](https://github.com/WeBankFinTech/Linkis/wiki/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Linkis)
+Linkis精简版(0.9.4及以上)，[如何安装Linkis](https://github.com/WeBankFinTech/Linkis/wiki/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Linkis)
 
 JDK (1.8.0_141以上)，[如何安装JDK](https://www.runoob.com/java/java-environment-setup.html) 
 
@@ -47,7 +51,118 @@ Nginx，[如何安装Nginx](https://www.tecmint.com/install-nginx-on-centos-7/)
      sudo useradd hadoop    
 ```
 
-##### 注意:用户需要有sudo权限，且可免密登陆本机。[如何配置SSH免密登陆](https://www.jianshu.com/p/0922095f69f3)
+##### 注意:用户需要有sudo权限，且可免密登陆本机。[如何配置SSH免密登陆](https://linuxconfig.org/passwordless-ssh)
+```
+      vi /etc/sudoers
+
+      hadoop  ALL=(ALL)       NOPASSWD: NOPASSWD: ALL 
+```
+
+### b. 安装包准备
+
+从DSS已发布的release中（[点击这里进入下载页面](https://github.com/WeBankFinTech/DataSphereStudio/releases)），下载对应安装包。先解压安装包到安装目录，并对解压后的文件进行配置修改
+
+```
+    tar -xvf  wedatasphere-dss-x.x.x-dist.tar.gz
+```
+
+
+### c. 修改基础配置
+   
+```
+    vi conf/config.sh   
+```
+
+```properties
+<!--说明：以下为简单版DSS基础配置项，如果您想体验更多企业特性，请安装标准版DSS-->
+
+    deployUser=hadoop  #指定部署用户
+
+    DSS_INSTALL_HOME=$workDir    #默认为上一级目录 
+    
+    WORKSPACE_USER_ROOT_PATH=file:///tmp/Linkis   #指定用户根目录，存储用户的脚本文件和日志文件等，是用户的工作空间。
+
+    RESULT_SET_ROOT_PATH=hdfs:///tmp/linkis  # 结果集文件路径，用于存储Job的结果集文件 
+    
+```
+
+### d. 修改数据库配置
+
+```bash
+    vi conf/db.sh 
+```
+
+```properties
+    # 设置DSS-Server和Eventchecker AppJoint的数据库的连接信息,需要和linkis保持同库
+    MYSQL_HOST=
+    MYSQL_PORT=
+    MYSQL_DB=
+    MYSQL_USER=
+    MYSQL_PASSWORD=
+```
+
+### 2.3 前端端环境配置准备
+
+### a、下载安装包
+
+   点击[release](https://github.com/WeBankFinTech/DataSphereStudio/releases) 下载对应安装包，并在安装目录进行解压：
+
+```bash
+    unzip wedatasphere-dss-web-x.x.x-dist.zip 
+```
+
+##### 注意:如果DSS前端安装包是用户自行编译的，则需要把[visualis前端安装包](https://github.com/WeBankFinTech/Visualis/releases)复制到DSS前端安装目录的dss/visualis文件夹下，以供自动化安装使用
+
+### b、配置修改
+
+&nbsp;&nbsp;&nbsp;&nbsp;进入前端工作目录,在该目录下编辑:
+
+
+```bash
+    vi conf/config.sh 
+```
+
+更改dss的前端端口和后端linkis的gateway的IP地址及端口
+
+```
+# Configuring front-end ports
+dss_port="8088"
+
+# URL of the backend linkis gateway
+linkis_url="http://127.0.0.1:9001"
+
+# dss ip address
+dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/(.*)/, "\\1", "g", $2)}'|awk 'NR==1')
+```
+
+   环境准备完毕，点我进入 [五、安装和使用](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%BA%94%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8)
+   
+
+----
+
+## 三、简单版DSS环境配置准备
+DSS环境配置准备分为三部分，前后端基础软件安装、后端环境配置准备和前端环配置境准备，详细介绍如下：
+### 3.1 前后端基础软件安装
+Linkis简单版(0.9.4及以上)，[如何安装Linkis](https://github.com/WeBankFinTech/Linkis/wiki/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Linkis)
+
+JDK (1.8.0_141以上)，[如何安装JDK](https://www.runoob.com/java/java-environment-setup.html) 
+
+MySQL (5.5+)，[如何安装MySQL](https://www.runoob.com/mysql/mysql-install.html) 
+
+Nginx，[如何安装Nginx](https://www.tecmint.com/install-nginx-on-centos-7/) 
+
+### 3.2 后端环境配置准备
+
+### a. 创建用户
+
+  例如: **部署用户是hadoop账号**
+
+在部署机器上创建部署用户，使用该用户进行安装。
+```
+     sudo useradd hadoop    
+```
+
+##### 注意:用户需要有sudo权限，且可免密登陆本机。[如何配置SSH免密登陆](https://linuxconfig.org/passwordless-ssh)
 ```
       vi /etc/sudoers
 
@@ -74,18 +189,14 @@ Nginx，[如何安装Nginx](https://www.tecmint.com/install-nginx-on-centos-7/)
 
     deployUser=hadoop  #指定部署用户
 
-    DSS_INSTALL_HOME=/appcom/Install/DSS    #指定DSS的安装目录 
-
-    EUREKA_INSTALL_IP=127.0.0.1 #Linkis的 EUREKA 服务主机IP地址
-    
-    EUREKA_PORT=20303  #Linkis的 EUREKA 服务端口号
+    DSS_INSTALL_HOME=$workDir    #默认为上一级目录 
     
     WORKSPACE_USER_ROOT_PATH=file:///tmp/Linkis   #指定用户根目录，存储用户的脚本文件和日志文件等，是用户的工作空间。
 
     RESULT_SET_ROOT_PATH=hdfs:///tmp/linkis  # 结果集文件路径，用于存储Job的结果集文件 
 
     #用于DATACHECK校验
-    HIVE_META_URL=jdbc:mysql://127.0.0.1:3306/linkis?characterEncoding=UTF-8
+    HIVE_META_URL=jdbc:mysql://127.0.0.1:3306/hivemeta?characterEncoding=UTF-8
     HIVE_META_USER=xxx
     HIVE_META_PASSWORD=xxx
     
@@ -98,7 +209,7 @@ Nginx，[如何安装Nginx](https://www.tecmint.com/install-nginx-on-centos-7/)
 ```
 
 ```properties
-    # 设置DSS-Server和Eventchecker AppJoint的数据库的连接信息。
+    # 设置DSS-Server和Eventchecker AppJoint的数据库的连接信息,需要和linkis保持同库
     MYSQL_HOST=
     MYSQL_PORT=
     MYSQL_DB=
@@ -106,7 +217,7 @@ Nginx，[如何安装Nginx](https://www.tecmint.com/install-nginx-on-centos-7/)
     MYSQL_PASSWORD=
 ```
 
-### 2.3 前端端环境配置准备
+### 3.3 前端端环境配置准备
 
 ### a、下载安装包
 
@@ -132,15 +243,15 @@ dss_port="8088"
 linkis_url="http://127.0.0.1:9001"
 
 # dss ip address
-dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/(.*)/, "\\1", "g", $2)}')
+dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/(.*)/, "\\1", "g", $2)}'|awk 'NR==1')
 ```
 
-   环境准备完毕，点我进入 [四、安装和使用](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E5%9B%9B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8)
+   环境准备完毕，点我进入 [五、安装和使用](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%BA%94%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8)
 
-## 三、标准版DSS环境配置准备
+## 四、标准版DSS环境配置准备
 标准版DSS环境准备也分为三部分，前后端基础软件安装、后端环境准备和前端环境准备，详细介绍如下：
-### 3.1 前后端基础软件安装
-Linkis标准版(0.9.1及以上)，[如何安装Linkis](https://github.com/WeBankFinTech/Linkis/wiki/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Linkis)
+### 4.1 前后端基础软件安装
+Linkis标准版(0.9.4及以上)，[如何安装Linkis](https://github.com/WeBankFinTech/Linkis/wiki/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Linkis)
 
 JDK (1.8.0_141以上)，[如何安装JDK](https://www.runoob.com/java/java-environment-setup.html)
 
@@ -153,7 +264,7 @@ Qualitis [如何安装Qualitis](https://github.com/WeBankFinTech/Qualitis/blob/m
 Azkaban [如何安装Azkaban](https://github.com/azkaban/azkaban) 
 ##### 注意：支持Azkaban调度需要配套安装linkis-jobtype，请点击[Linkis jobType安装文档](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/Azkaban_LinkisJobType_Deployment_Manual.md)
 
-### 3.2 后端环境配置准备
+### 4.2 后端环境配置准备
 
 ### a. 创建用户
 
@@ -164,7 +275,7 @@ Azkaban [如何安装Azkaban](https://github.com/azkaban/azkaban)
      sudo useradd hadoop    
 ```
 
-##### 注意:用户需要有sudo权限，且可免密登陆本机。[如何配置SSH免密登陆](https://www.jianshu.com/p/0922095f69f3)
+##### 注意:用户需要有sudo权限，且可免密登陆本机。[如何配置SSH免密登陆](https://linuxconfig.org/passwordless-ssh)
 ```
       vi /etc/sudoers
 
@@ -191,20 +302,16 @@ Azkaban [如何安装Azkaban](https://github.com/azkaban/azkaban)
 
     deployUser=hadoop  #指定部署用户
 
-    DSS_INSTALL_HOME=/appcom/Install/DSS    #指定DSS的安装目录 
-
-    EUREKA_INSTALL_IP=127.0.0.1 #Linkis的 EUREKA 服务主机IP地址
-    
-    EUREKA_PORT=20303  #Linkis的 EUREKA 服务端口号
+    DSS_INSTALL_HOME=$workDir    #默认为上一级目录  
     
     WORKSPACE_USER_ROOT_PATH=file:///tmp/Linkis   #指定用户根目录，存储用户的脚本文件和日志文件等，是用户的工作空间。
 
     RESULT_SET_ROOT_PATH=hdfs:///tmp/linkis  # 结果集文件路径，用于存储Job的结果集文件 
     
-    WDS_SCHEDULER_PATH=file:///appcom/tmp/wds/scheduler #Azkaban工程存储目录
+    WDS_SCHEDULER_PATH=file:///appcom/tmp/wds/scheduler #DSS工程转换成Azkaban工程后zip包的存储路径
 
     #1、用于DATACHECK
-    HIVE_META_URL=jdbc:mysql://127.0.0.1:3306/linkis?characterEncoding=UTF-8
+    HIVE_META_URL=jdbc:mysql://127.0.0.1:3306/hivemeta?characterEncoding=UTF-8
     HIVE_META_USER=xxx
     HIVE_META_PASSWORD=xxx
     #2、用于Qualitis
@@ -223,7 +330,7 @@ Azkaban [如何安装Azkaban](https://github.com/azkaban/azkaban)
 ```
 
 ```properties
-    # 设置DSS-Server和Eventchecker AppJoint的数据库的连接信息。
+    # 设置DSS-Server和Eventchecker AppJoint的数据库的连接信息,需要和linkis保持同库
     MYSQL_HOST=
     MYSQL_PORT=
     MYSQL_DB=
@@ -231,7 +338,7 @@ Azkaban [如何安装Azkaban](https://github.com/azkaban/azkaban)
     MYSQL_PASSWORD=
 ```
 
-### 3.3 前端环境配置准备
+### 4.3 前端环境配置准备
 
 ### a、下载安装包
 
@@ -258,14 +365,14 @@ dss_port="8088"
 linkis_url="http://127.0.0.1:9001"
 
 # dss ip address
-dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/(.*)/, "\\1", "g", $2)}')
+dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/(.*)/, "\\1", "g", $2)}'|awk 'NR==1')
 ```
 
-   环境准备完毕，点我进入 [四、安装和使用](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E5%9B%9B%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8)
+   环境准备完毕，点我进入 [五、安装和使用](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch2/DSS%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md#%E4%BA%94%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8)
 
-# 四、安装和使用
+## 五、安装和使用
 
-## 4.1. DataSphereStudio 后台安装：
+### 5.1. DataSphereStudio 后台安装：
 
 ### a. 执行安装脚本：
 
@@ -277,14 +384,12 @@ dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/
 
 - install.sh脚本会询问您安装模式。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装模式就是简单模式或标准模式，请根据您准备的环境情况，选择合适的安装模式，简单模式和标准模式都会检查mysql服务，标准模式还会检测Qualitis服务和Azkaban服务，如果检测失败会直接退出安装。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装模式就是简单模式或标准模式，请根据您准备的环境情况，选择合适的安装模式，精简版、简单模式和标准模式都会检查mysql服务，标准模式还会检测Qualitis服务和Azkaban外部server服务，如果检测失败会直接退出安装。
+
+- 安装过程如果有很多cp 命令提示您是否覆盖安装，说明您的系统配置有别名，输入alias，如果有cp、mv、rm的别名，如果有可以去掉，就不会再有大量提示。
 
 - install.sh脚本会询问您是否需要初始化数据库并导入元数据。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为担心用户重复执行install.sh脚本，把数据库中的用户数据清空，所以在install.sh执行时，会询问用户是否需要初始化数据库并导入元数据。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**第一次安装**必须选是。
-
-- install.sh脚本会询问您是否需要初始化使用[davinci](https://github.com/edp963/davinci)所依赖的库表,如果您没有安装过davinci，则需要进行初始化建表，如果您已经安装了davinci，则无需再次初始化。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为担心用户会mysql中已安装好的davinci数据清空，所以在install.sh执行时，会询问用户是否需要初始化。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**第一次安装**必须选是。
 
 
@@ -292,9 +397,7 @@ dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过查看控制台打印的日志信息查看是否安装成功。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果有错误信息，可以查看具体报错原因。
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您也可以通过查看我们的[常见问题](https://github.com/WeBankFinTech/DataSphereStudio/wiki/FAQ)，获取问题的解答。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您也可以通过查看我们的[常见问题]([https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch1/DSS%E5%AE%89%E8%A3%85%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch1/DSS%E5%AE%89%E8%A3%85%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md))，获取问题的解答。
 
 ### d. 启动DataSphereStudio后台服务
 
@@ -316,7 +419,7 @@ dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/
     
   ![Eureka](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/images/zh_CN/chapter2/quickInstallUse/quickInstall.png)
 
-## 4.2 DataSphereStudio前端安装
+### 5.2 DataSphereStudio前端安装
 
 ### a、部署
 
@@ -341,7 +444,7 @@ dss_ipaddr=$(ip addr | awk '/^[0-9]+: / {}; /inet.*global/ {print gensub(/(.*)\/
 添加如下内容：
 ```
 server {
-            listen       8080;# 访问端口
+            listen       8088;# 访问端口
             server_name  localhost;
             #charset koi8-r;
             #access_log  /var/log/nginx/host.access.log  main;
@@ -387,7 +490,7 @@ server {
 ### 2.将前端包拷贝到对应的目录:
 ```/appcom/Install/DSS/FRONT; # 前端包安装目录 ```
 
-##### 注意: 手动安装DSS前端，则需要到DSS前端安装目录的dss/visualis文件夹下，解压visualis前端安装包。
+##### 注意: 手动安装DSS前端，则需要到DSS前端安装目录的dss/visualis文件夹下，解压visualis前端安装包，用于自动化安装visualis前端。
 
 ### 3.启动服务
 ```sudo systemctl restart nginx```
@@ -395,54 +498,10 @@ server {
 ### 4.谷歌浏览器访问：
 ```http://nginx_ip:nginx_port```
 
-如何详细使用DSS, 点我进入 [DSS详细使用文档](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch3/DSS_User_Manual.md)
+**DSS登录用户和登录密码都是部署DSS的Linux用户名，更多用户配置，详见** [Linkis LDAP](https://github.com/WeBankFinTech/Linkis/wiki/%E9%83%A8%E7%BD%B2%E5%92%8C%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93)
 
-## 4.3、常见问题
+如何详细使用DSS, 点我进入 [DSS快速使用文档](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch3/DSS_User_Manual.md)
 
-(1)用户token为空
+### 5.3、常见问题
 
-```
-sudo vi dss-server/conf/token.properties
-```
-
-添加用户
-
-```
-xxx=xxx
-```
-
-(2)visualis执行报错
-
-```
-Caused by: java.lang.Exception: /data/DSSInstall/visualis-server/bin/phantomjsis not executable!
-```
-
-下载 [driver驱动](https://phantomjs.org/download.html)，把phantomjs二进制文件放入visualis-server的bin目录下即可。
-
-
-
-(3)上传文件大小限制
-
-```
-sudo vi /etc/nginx/nginx.conf
-```
-
-更改上传大小
-
-```
-client_max_body_size 200m
-```
-
- (4)接口超时
-
-```
-sudo vi /etc/nginx/conf.d/dss.conf
-```
-
-
-更改接口超时时间
-
-```
-proxy_read_timeout 600s
-```
-
+[DSS安装常见问题](https://github.com/WeBankFinTech/DataSphereStudio/blob/master/docs/zh_CN/ch1/DSS%E5%AE%89%E8%A3%85%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%88%97%E8%A1%A8.md)

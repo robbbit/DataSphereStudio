@@ -18,7 +18,7 @@
 import shell from '../module/process/images/shell.svg';
 import flow from '../module/process/images/newIcon/flow.svg';
 import eventchecker from '../module/process/images/newIcon/eventcheckerf.svg';
-import Python from '../module/process/images/pyspark.svg';
+import sparkPython from '../module/process/images/pyspark.svg';
 import sql from '../module/process/images/newIcon/spark.svg';
 import hivesql from '../module/process/images/newIcon/hive.svg';
 import veceive from '../module/process/images/newIcon/eventcheckerw.svg';
@@ -31,12 +31,16 @@ import sendmail from '../module/process/images/newIcon/email.svg';
 import scala from '../module/process/images/scala.svg';
 import exchange from '../module/process/images/newIcon/exchange.svg';
 import qualitis from '../module/process/images/newIcon/qualitis.svg';
+import python from '../module/process/images/newIcon/python.svg';
+import jdbc from '../module/process/images/newIcon/JDBC2.svg';
 const NODETYPE = {
-  SHELL: 'azkaban.shell',
+  SHELL: 'linkis.shell.sh',
   HQL: 'linkis.hive.hql',
   SPARKSQL: 'linkis.spark.sql',
   SPARKPY: 'linkis.spark.py',
   SCALA: 'linkis.spark.scala',
+  JDBC: 'linkis.jdbc.jdbc',
+  PYTHON: 'linkis.python.python',
   CONNECTOR: 'linkis.control.empty',
   DISPLAY: 'linkis.appjoint.visualis.display',
   DASHBOARD: 'linkis.appjoint.visualis.dashboard',
@@ -54,9 +58,15 @@ const ext = {
   [NODETYPE.HQL]: 'hql',
   [NODETYPE.SPARKSQL]: 'sparksql',
   [NODETYPE.SPARKPY]: 'pyspark',
-  [NODETYPE.SCALA]: 'scala'
+  [NODETYPE.SCALA]: 'scala',
+  [NODETYPE.PYTHON]: 'python',
+  [NODETYPE.JDBC]: 'jdbc'
 }
 const NODEICON = {
+  [NODETYPE.JDBC]: {
+    icon: jdbc,
+    class: {'jdbc': true}
+  },
   [NODETYPE.SHELL]: {
     icon: shell,
     class: {'shell': true}
@@ -70,12 +80,16 @@ const NODEICON = {
     class: {'sql': true}
   },
   [NODETYPE.SPARKPY]: {
-    icon: Python,
-    class: {'Python': true}
+    icon: sparkPython,
+    class: {'sparkPython': true}
   },
   [NODETYPE.SCALA]: {
     icon: scala,
     class: {'scala': true}
+  },
+  [NODETYPE.PYTHON]: {
+    icon: python,
+    class: {'python': true}
   },
   [NODETYPE.CONNECTOR]: {
     icon: connect,
